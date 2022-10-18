@@ -77,7 +77,7 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
     break if player1.life_points <= 0 && player2.life_points <= 0
 end
 
-
+puts
 puts "Game Over !"
     if user.life_points > 1
          puts "GG, get a life now."
