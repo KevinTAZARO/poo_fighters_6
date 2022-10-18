@@ -37,28 +37,4 @@ attr_accessor :name, :life_points
 
         puts"*********************************"
     end
-
-    def fight(p1, p2)
-        while p1.life_points > 0 && p2.life_points > 0
-             puts "Here is the state of each fighters : \n#{p1.show_state} \n#{p2.show_state}"
-             sleep 2
-             puts "Get ready for the next battle"
-                p2.attacks(p1)
-                if p1.life_points <= 0
-                    sleep 2
-                    puts "#{p1.name} is dead"
-                    break
-                else
-                    sleep 2
-                    puts "Warning ! #{p1.name} is counter-attacking !"
-                    p1.attacks(p2)
-                    if p2.life_points <= 0
-                        sleep 2
-                        puts "#{p2.name} is dead"
-                        break
-                    end
-                end
-        end
-    end
 end
-
